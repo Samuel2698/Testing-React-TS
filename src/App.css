@@ -1,0 +1,38 @@
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.items {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.search-button {
+  margin: 0;
+}
+
+@media (width<=1024px) {
+  .items {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (width<=768px) {
+  .items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width<=520px) {
+  .search-button {
+    margin-top: 1rem;
+  }
+
+  .items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
